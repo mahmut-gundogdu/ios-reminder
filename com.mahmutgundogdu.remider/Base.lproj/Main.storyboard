@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="com_mahmutgundogdu_remider" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KZj-Xk-PlK" customClass="CircleProgressView" customModule="com_mahmutgundogdu_remider" customModuleProvider="target">
+                                <rect key="frame" x="62.5" y="100" width="250" height="250"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Başla" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yfN-Wh-Z53">
+                                        <rect key="frame" x="77.5" y="104" width="95" height="42.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="yfN-Wh-Z53" secondAttribute="height" multiplier="175:78" id="7rY-5j-j0y"/>
+                                        </constraints>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="yfN-Wh-Z53" firstAttribute="centerX" secondItem="KZj-Xk-PlK" secondAttribute="centerX" id="2es-9O-mbv"/>
+                                    <constraint firstAttribute="height" constant="250" id="2xF-fN-N8F"/>
+                                    <constraint firstAttribute="width" constant="250" id="EvC-sf-YsU"/>
+                                    <constraint firstItem="yfN-Wh-Z53" firstAttribute="centerY" secondItem="KZj-Xk-PlK" secondAttribute="centerY" id="sL8-hI-9by"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clockwise" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOf-mo-IDX">
+                                <rect key="frame" x="141.5" y="402" width="92" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="ffA-D1-pDM"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="92" id="irf-xw-5Kc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="BtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gBF-bP-X00"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KZj-Xk-PlK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="5DX-m8-7kJ"/>
+                            <constraint firstItem="KZj-Xk-PlK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GBC-Xc-JU8"/>
+                            <constraint firstItem="EOf-mo-IDX" firstAttribute="top" secondItem="KZj-Xk-PlK" secondAttribute="bottom" constant="52" id="NMX-sE-bXV"/>
+                            <constraint firstItem="EOf-mo-IDX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qp1-bz-obN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnStartStop" destination="EOf-mo-IDX" id="KMa-2H-sgB"/>
+                        <outlet property="circleProgressView" destination="KZj-Xk-PlK" id="nQ9-YT-u4T"/>
+                        <outlet property="timeLabel" destination="yfN-Wh-Z53" id="T0f-Zy-ViZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
+        </scene>
+    </scenes>
+</document>
